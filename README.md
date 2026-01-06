@@ -33,7 +33,6 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-
 ### 1. Start FastAPI Server
 ```bash
 cd C:\Users\DELL\Desktop\E-commerce-preoduct-delivery-prediction
