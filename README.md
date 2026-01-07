@@ -39,7 +39,6 @@ This project provides:
 - Business insights into why delays occur
 - Automated ML pipelines (MLOps)
 - Real-time predictions via API & UI
-
 - Interactive dashboards for stakeholders
 
 📂 Dataset
