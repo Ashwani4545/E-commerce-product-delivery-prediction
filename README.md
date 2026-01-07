@@ -35,11 +35,11 @@ E-commerce companies face:
 
 This project provides:
 
--Early prediction of delivery delays
+- Early prediction of delivery delays
 
--Business insights into why delays occur
+- Business insights into why delays occur
 
--Automated ML pipelines (MLOps)
+- Automated ML pipelines (MLOps)
 
 -Real-time predictions via API & UI
 
