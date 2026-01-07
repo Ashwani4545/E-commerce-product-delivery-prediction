@@ -37,7 +37,6 @@ This project provides:
 
 - Early prediction of delivery delays
 - Business insights into why delays occur
-
 - Automated ML pipelines (MLOps)
 
 - Real-time predictions via API & UI
