@@ -31,7 +31,7 @@ E-commerce companies face:
 - Reactive logistics planning
 - Increased operational costs and customer dissatisfaction
 
-✅ Solution
+## ✅ Solution
 
 This project provides:
 
