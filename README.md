@@ -41,9 +41,9 @@ This project provides:
 
 - Automated ML pipelines (MLOps)
 
--Real-time predictions via API & UI
+- Real-time predictions via API & UI
 
--Interactive dashboards for stakeholders
+- Interactive dashboards for stakeholders
 
 📂 Dataset
 
