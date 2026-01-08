@@ -225,10 +225,12 @@ response = requests.post("http://localhost:8000/predict", json=payload)
 print(response.json())
 ```
 
-🚀 How to Run Locally
+## 🚀 How to Run Locally
 1️⃣ Clone Repository
+```
 git clone https://github.com/your-username/ecommerce-delivery-prediction.git
 cd ecommerce-delivery-prediction
+```
 
 2️⃣ Install Dependencies
 pip install -r requirements.txt
