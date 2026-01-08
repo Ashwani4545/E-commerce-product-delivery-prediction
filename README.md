@@ -45,23 +45,23 @@ This project provides:
 
 ### Key Characteristics
 
-Order-level e-commerce data
+-Order-level e-commerce data
 
-Order & shipping dates
+-Order & shipping dates
 
-Product, customer, channel, and device information
+-Product, customer, channel, and device information
 
-Suitable for ML, visualization, and MLOps
+-Suitable for ML, visualization, and MLOps
 
-Engineered Targets
+### Engineered Targets
 
-delivery_days = shipping_date − order_date
+-delivery_days = shipping_date − order_date
 
 delivery_delayed (target):
 
-0 → Delivered on time
+  0 → Delivered on time
 
-1 → Delivery delayed (SLA > 5 days)
+  1 → Delivery delayed (SLA > 5 days)
 
 ## 🧠 Features Engineered
 
