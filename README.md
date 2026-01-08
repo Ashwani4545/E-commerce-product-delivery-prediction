@@ -119,11 +119,11 @@ Data → Feature Engineering → Training → Evaluation
 - Delivery prediction (On-time / Delayed)
 - Delay probability score
 
-📊 Visualization & Dashboards
+## 📊 Visualization & Dashboards
 
 Interactive dashboards were built using Power BI / Tableau.
 
-Dashboards Included
+### Dashboards Included
 1️⃣ Delivery Performance
 
 On-time vs delayed orders
