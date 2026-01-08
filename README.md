@@ -123,21 +123,21 @@ Interactive dashboards were built using Power BI / Tableau.
 ### Dashboards Included
 #### 1️⃣ Delivery Performance
 
--On-time vs delayed orders
--Average delivery days
--SLA breach rate
+- On-time vs delayed orders
+- Average delivery days
+- SLA breach rate
 
 #### 2️⃣ Delay Trends
 
--Monthly & seasonal delay patterns
--Weekday vs weekend analysis
+- Monthly & seasonal delay patterns
+- Weekday vs weekend analysis
 
 #### 3️⃣ Customer Behavior
 
--Delay rate by customer segment
--Channel & device impact
--Customer risk score analysis
--Screenshots are embedded below 👇
+- Delay rate by customer segment
+- Channel & device impact
+- Customer risk score analysis
+- Screenshots are embedded below 👇
 
 ## 📸 Dashboard Snapshots
 ### Delivery Performance
@@ -147,15 +147,15 @@ Interactive dashboards were built using Power BI / Tableau.
 ## 🧱 Tech Stack (Final)
 ### Data & ML
 
--Python, Pandas, NumPy
--Scikit-learn
--XGBoost
+- Python, Pandas, NumPy
+- Scikit-learn
+- XGBoost
 
 ### MLOps
 
--MLflow
--Airflow / Prefect
--Evidently AI
+- MLflow
+- Airflow / Prefect
+- Evidently AI
 
 ### API & UI
 
