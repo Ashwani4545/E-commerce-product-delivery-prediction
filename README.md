@@ -63,7 +63,7 @@ delivery_delayed (target):
 
 1 → Delivery delayed (SLA > 5 days)
 
-🧠 Features Engineered
+## 🧠 Features Engineered
 
 Order value (price × quantity)
 
@@ -81,7 +81,7 @@ Order channel
 
 Device type
 
-🧪 Machine Learning
+## 🧪 Machine Learning
 Models Trained
 
 Logistic Regression (baseline)
