@@ -239,7 +239,7 @@ uvicorn api.main:app --reload
 4️⃣ Run Streamlit App
 streamlit run app/streamlit_app.py
 
-📈 Business Impact
+## 📈 Business Impact
 
 Early identification of high-risk deliveries
 
@@ -251,7 +251,7 @@ Better customer satisfaction
 
 Data-driven operational decisions
 
-🌟 What Makes This Project Unique
+## 🌟 What Makes This Project Unique
 
 Business-driven ML (not accuracy-only)
 
@@ -265,11 +265,11 @@ Strong visualization & storytelling
 
 Live-deployable architecture
 
-🧠 How to Explain This Project (Interview Ready)
+## 🧠 How to Explain This Project (Interview Ready)
 
 “I built an end-to-end e-commerce delivery delay prediction system using machine learning, MLOps pipelines, APIs, and business dashboards to proactively reduce logistics delays and improve customer experience.”
 
-📌 Future Enhancements
+## 📌 Future Enhancements
 
 ETA prediction (regression)
 
@@ -281,7 +281,7 @@ Explainable AI (SHAP)
 
 Auto-scaling cloud deployment
 
-👤 Author
+## 👤 Author
 
 Ashwani Pandey
 Data Science & ML Enthusiast
