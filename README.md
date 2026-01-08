@@ -270,11 +270,11 @@ streamlit run app/streamlit_app.py
 
 ## 📌 Future Enhancements
 
--ETA prediction (regression)
--Route & warehouse optimization
--Real-time streaming data (Kafka)
--Explainable AI (SHAP)
--Auto-scaling cloud deployment
+- ETA prediction (regression)
+- Route & warehouse optimization
+- Real-time streaming data (Kafka)
+- Explainable AI (SHAP)
+- Auto-scaling cloud deployment
 
 ## 👤 Author
 
