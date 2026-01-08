@@ -103,25 +103,21 @@ Data → Feature Engineering → Training → Evaluation
 - GitHub Actions – CI/CD (optional)
 
 ## 🌐 API & Application
-Backend
+### Backend
 
-FastAPI
+- FastAPI
+- Input validation using Pydantic
+- Real-time predictions
 
-Input validation using Pydantic
+### Frontend
 
-Real-time predictions
+- Streamlit
+- Business-friendly UI for non-technical users
 
-Frontend
+### Output
 
-Streamlit
-
-Business-friendly UI for non-technical users
-
-Output
-
-Delivery prediction (On-time / Delayed)
-
-Delay probability score
+- Delivery prediction (On-time / Delayed)
+- Delay probability score
 
 📊 Visualization & Dashboards
 
