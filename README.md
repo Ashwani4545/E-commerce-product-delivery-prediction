@@ -53,29 +53,19 @@ This project provides:
 ### Engineered Targets
 
 - delivery_days = shipping_date − order_date
-
 delivery_delayed (target):
-
   - 0 → Delivered on time
-
   - 1 → Delivery delayed (SLA > 5 days)
 
 ## 🧠 Features Engineered
 
 - Order value (price × quantity)
-
 - Day of week
-
 - Month / seasonality
-
 - Customer risk score (historical delay behavior)
-
 - Product category
-
 - Customer segment
-
 - Order channel
-
 - Device type
 
 ## 🧪 Machine Learning
