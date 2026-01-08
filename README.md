@@ -95,11 +95,8 @@ Data → Feature Engineering → Training → Evaluation
 ### MLOps Tools
 
 - MLflow – experiment tracking & model registry
-
 - Apache Airflow / Prefect – automated training pipelines
-
 - Evidently AI – data & concept drift detection
-
 - GitHub Actions – CI/CD (optional)
 
 ## 🌐 API & Application
@@ -126,27 +123,27 @@ Interactive dashboards were built using Power BI / Tableau.
 ### Dashboards Included
 #### 1️⃣ Delivery Performance
 
-On-time vs delayed orders
+-On-time vs delayed orders
 
-Average delivery days
+-Average delivery days
 
-SLA breach rate
+-SLA breach rate
 
 #### 2️⃣ Delay Trends
 
-Monthly & seasonal delay patterns
+-Monthly & seasonal delay patterns
 
-Weekday vs weekend analysis
+-Weekday vs weekend analysis
 
 #### 3️⃣ Customer Behavior
 
-Delay rate by customer segment
+-Delay rate by customer segment
 
-Channel & device impact
+-Channel & device impact
 
-Customer risk score analysis
+-Customer risk score analysis
 
-Screenshots are embedded below 👇
+-Screenshots are embedded below 👇
 
 ## 📸 Dashboard Snapshots
 ### Delivery Performance
