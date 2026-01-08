@@ -225,3 +225,63 @@ response = requests.post("http://localhost:8000/predict", json=payload)
 print(response.json())
 ```
 
+🚀 How to Run Locally
+1️⃣ Clone Repository
+git clone https://github.com/your-username/ecommerce-delivery-prediction.git
+cd ecommerce-delivery-prediction
+
+2️⃣ Install Dependencies
+pip install -r requirements.txt
+
+3️⃣ Run API
+uvicorn api.main:app --reload
+
+4️⃣ Run Streamlit App
+streamlit run app/streamlit_app.py
+
+📈 Business Impact
+
+Early identification of high-risk deliveries
+
+Improved logistics planning
+
+Reduced refunds & penalties
+
+Better customer satisfaction
+
+Data-driven operational decisions
+
+🌟 What Makes This Project Unique
+
+Business-driven ML (not accuracy-only)
+
+Customer behavior integrated into prediction
+
+Full MLOps lifecycle implementation
+
+Real-time API + UI
+
+Strong visualization & storytelling
+
+Live-deployable architecture
+
+🧠 How to Explain This Project (Interview Ready)
+
+“I built an end-to-end e-commerce delivery delay prediction system using machine learning, MLOps pipelines, APIs, and business dashboards to proactively reduce logistics delays and improve customer experience.”
+
+📌 Future Enhancements
+
+ETA prediction (regression)
+
+Route & warehouse optimization
+
+Real-time streaming data (Kafka)
+
+Explainable AI (SHAP)
+
+Auto-scaling cloud deployment
+
+👤 Author
+
+Ashwani Pandey
+Data Science & ML Enthusiast
