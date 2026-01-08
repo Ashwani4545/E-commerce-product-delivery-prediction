@@ -88,10 +88,10 @@ delivery_delayed (target):
 ## 🔁 MLOps Architecture
 
 The project follows a full ML lifecycle:
-
+```
 Data → Feature Engineering → Training → Evaluation
      → Model Registry → Deployment → Monitoring → Retraining
-
+```
 MLOps Tools
 
 MLflow – experiment tracking & model registry
