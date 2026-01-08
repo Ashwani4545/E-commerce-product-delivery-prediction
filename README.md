@@ -249,11 +249,11 @@ streamlit run app/streamlit_app.py
 
 ## 📈 Business Impact
 
--Early identification of high-risk deliveries
--Improved logistics planning
--Reduced refunds & penalties
--Better customer satisfaction
--Data-driven operational decisions
+- Early identification of high-risk deliveries
+- Improved logistics planning
+- Reduced refunds & penalties
+- Better customer satisfaction
+- Data-driven operational decisions
 
 ## 🌟 What Makes This Project Unique
 
