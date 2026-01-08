@@ -124,7 +124,7 @@ Data → Feature Engineering → Training → Evaluation
 Interactive dashboards were built using Power BI / Tableau.
 
 ### Dashboards Included
-1️⃣ Delivery Performance
+#### 1️⃣ Delivery Performance
 
 On-time vs delayed orders
 
@@ -132,13 +132,13 @@ Average delivery days
 
 SLA breach rate
 
-2️⃣ Delay Trends
+#### 2️⃣ Delay Trends
 
 Monthly & seasonal delay patterns
 
 Weekday vs weekend analysis
 
-3️⃣ Customer Behavior
+#### 3️⃣ Customer Behavior
 
 Delay rate by customer segment
 
@@ -148,14 +148,12 @@ Customer risk score analysis
 
 Screenshots are embedded below 👇
 
-📸 Dashboard Snapshots
-Delivery Performance
+## 📸 Dashboard Snapshots
+### Delivery Performance
+### Delay Trends
+### Customer Behavior
 
-Delay Trends
-
-Customer Behavior
-
-🧱 Tech Stack (Final)
+## 🧱 Tech Stack (Final)
 Data & ML
 
 Python, Pandas, NumPy
