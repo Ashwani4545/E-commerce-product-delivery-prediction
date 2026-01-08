@@ -69,7 +69,7 @@ delivery_delayed (target):
 - Device type
 
 ## 🧪 Machine Learning
-Models Trained
+### Models Trained
 
 Logistic Regression (baseline)
 
@@ -79,11 +79,11 @@ Random Forest (tuned & selected)
 
 XGBoost (optional comparison)
 
-Evaluation Metric
+### Evaluation Metric
 
 F1-Score (handles class imbalance)
 
-Final Model
+### Final Model
 
 Tuned Random Forest
 
