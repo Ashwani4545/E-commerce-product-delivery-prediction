@@ -46,11 +46,8 @@ This project provides:
 ### Key Characteristics
 
 - Order-level e-commerce data
-
 - Order & shipping dates
-
 - Product, customer, channel, and device information
-
 - Suitable for ML, visualization, and MLOps
 
 ### Engineered Targets
