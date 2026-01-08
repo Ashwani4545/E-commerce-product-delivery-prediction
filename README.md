@@ -65,21 +65,21 @@ delivery_delayed (target):
 
 ## 🧠 Features Engineered
 
--Order value (price × quantity)
+- Order value (price × quantity)
 
--Day of week
+- Day of week
 
 - Month / seasonality
 
--Customer risk score (historical delay behavior)
+- Customer risk score (historical delay behavior)
 
--Product category
+- Product category
 
--Customer segment
+- Customer segment
 
--Order channel
+- Order channel
 
--Device type
+- Device type
 
 ## 🧪 Machine Learning
 Models Trained
