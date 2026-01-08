@@ -250,27 +250,18 @@ streamlit run app/streamlit_app.py
 ## 📈 Business Impact
 
 -Early identification of high-risk deliveries
-
 -Improved logistics planning
-
 -Reduced refunds & penalties
-
 -Better customer satisfaction
-
 -Data-driven operational decisions
 
 ## 🌟 What Makes This Project Unique
 
 -Business-driven ML (not accuracy-only)
-
 -Customer behavior integrated into prediction
-
 -Full MLOps lifecycle implementation
-
 -Real-time API + UI
-
 -Strong visualization & storytelling
-
 -Live-deployable architecture
 
 ## 🧠 How to Explain This Project (Interview Ready)
