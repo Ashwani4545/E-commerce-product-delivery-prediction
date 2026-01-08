@@ -1,13 +1,13 @@
 # E-Commerce Delivery Delay Prediction
 
-## Project Overview
+## 🔍 Project Overview
 
 Timely delivery is a critical success factor in e-commerce. Late deliveries increase refunds, reduce customer trust, and raise operational costs.
 This project builds an end-to-end, production-ready system to predict whether an order will be delivered on time or delayed, using historical e-commerce order data.
 
 The solution combines machine learning, MLOps automation, APIs, dashboards, and cloud-ready deployment to support proactive logistics decision-making.
 
-## Project Structure
+## 📂 Project Structure
 ```
 .
 ├── api/                    # FastAPI backend
