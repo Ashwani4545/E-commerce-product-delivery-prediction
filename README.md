@@ -148,35 +148,26 @@ Interactive dashboards were built using Power BI / Tableau.
 ### Data & ML
 
 -Python, Pandas, NumPy
-
 -Scikit-learn
-
 -XGBoost
 
 ### MLOps
 
 -MLflow
-
 -Airflow / Prefect
-
 -Evidently AI
 
 ### API & UI
 
 -FastAPI
-
 -Streamlit
 
 ### Visualization
 
 -Power BI / Tableau
-
 -Deployment
-
 -Docker
-
 -Streamlit Cloud / Hugging Face Spaces
-
 -AWS (S3, EC2, ECS – optional)
 
 ## Installation
