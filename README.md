@@ -71,23 +71,23 @@ delivery_delayed (target):
 ## 🧪 Machine Learning
 ### Models Trained
 
-Logistic Regression (baseline)
+-Logistic Regression (baseline)
 
-Decision Tree
+-Decision Tree
 
-Random Forest (tuned & selected)
+-Random Forest (tuned & selected)
 
-XGBoost (optional comparison)
+-XGBoost (optional comparison)
 
 ### Evaluation Metric
 
-F1-Score (handles class imbalance)
+-F1-Score (handles class imbalance)
 
 ### Final Model
 
-Tuned Random Forest
+-Tuned Random Forest
 
-Saved as a single deployable pipeline (.pkl) including preprocessing
+-Saved as a single deployable pipeline (.pkl) including preprocessing
 
 🔁 MLOps Architecture
 
