@@ -225,26 +225,3 @@ response = requests.post("http://localhost:8000/predict", json=payload)
 print(response.json())
 ```
 
-## Model Training
-
-See `mainFile.ipynb` for complete training pipeline including:
-- Data preparation
-- EDA
-- Feature engineering
-- Model training & tuning
-- MLOps integration
-
-## Features
-
-- **Real-time predictions**: FastAPI REST API
-- **Interactive UI**: Streamlit web app
-- **ML Pipeline**: Complete end-to-end workflow
-- **MLOps**: MLflow tracking, Airflow automation, Evidently drift detection
-
-## Tech Stack
-
-- **ML**: scikit-learn, XGBoost
-- **API**: FastAPI, Uvicorn
-- **UI**: Streamlit
-- **MLOps**: MLflow, Airflow, Evidently
-- **Data**: pandas, numpy
