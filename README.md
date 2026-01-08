@@ -257,12 +257,12 @@ streamlit run app/streamlit_app.py
 
 ## 🌟 What Makes This Project Unique
 
--Business-driven ML (not accuracy-only)
--Customer behavior integrated into prediction
--Full MLOps lifecycle implementation
--Real-time API + UI
--Strong visualization & storytelling
--Live-deployable architecture
+- Business-driven ML (not accuracy-only)
+- Customer behavior integrated into prediction
+- Full MLOps lifecycle implementation
+- Real-time API + UI
+- Strong visualization & storytelling
+- Live-deployable architecture
 
 ## 🧠 How to Explain This Project (Interview Ready)
 
