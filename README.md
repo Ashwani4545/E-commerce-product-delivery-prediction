@@ -159,17 +159,17 @@ Interactive dashboards were built using Power BI / Tableau.
 
 ### API & UI
 
--FastAPI
--Streamlit
+- FastAPI
+- Streamlit
 
 ### Visualization
 
--Power BI / Tableau
+- Power BI / Tableau
 
 ### Deployment
--Docker
--Streamlit Cloud / Hugging Face Spaces
--AWS (S3, EC2, ECS – optional)
+- Docker
+- Streamlit Cloud / Hugging Face Spaces
+- AWS (S3, EC2, ECS – optional)
 
 ## Installation
 
