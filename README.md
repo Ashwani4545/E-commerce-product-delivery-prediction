@@ -85,7 +85,7 @@ delivery_delayed (target):
 - Tuned Random Forest
 - Saved as a single deployable pipeline (.pkl) including preprocessing
 
-🔁 MLOps Architecture
+## 🔁 MLOps Architecture
 
 The project follows a full ML lifecycle:
 
@@ -102,7 +102,7 @@ Evidently AI – data & concept drift detection
 
 GitHub Actions – CI/CD (optional)
 
-🌐 API & Application
+## 🌐 API & Application
 Backend
 
 FastAPI
