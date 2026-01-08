@@ -92,15 +92,15 @@ The project follows a full ML lifecycle:
 Data → Feature Engineering → Training → Evaluation
      → Model Registry → Deployment → Monitoring → Retraining
 ```
-MLOps Tools
+### MLOps Tools
 
-MLflow – experiment tracking & model registry
+- MLflow – experiment tracking & model registry
 
-Apache Airflow / Prefect – automated training pipelines
+- Apache Airflow / Prefect – automated training pipelines
 
-Evidently AI – data & concept drift detection
+- Evidently AI – data & concept drift detection
 
-GitHub Actions – CI/CD (optional)
+- GitHub Actions – CI/CD (optional)
 
 ## 🌐 API & Application
 Backend
