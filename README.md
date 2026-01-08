@@ -233,13 +233,19 @@ cd ecommerce-delivery-prediction
 ```
 
 2️⃣ Install Dependencies
+```
 pip install -r requirements.txt
+```
 
 3️⃣ Run API
+```
 uvicorn api.main:app --reload
+```
 
 4️⃣ Run Streamlit App
+```
 streamlit run app/streamlit_app.py
+```
 
 ## 📈 Business Impact
 
