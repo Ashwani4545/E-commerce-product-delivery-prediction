@@ -9,17 +9,21 @@ The solution combines machine learning, MLOps automation, APIs, dashboards, and 
 
 ## 📂 Project Structure
 ```
-.
-├── api/                    # FastAPI backend
-│   ├── main.py            # API endpoints
-│   ├── model.py           # Model loading
-│   └── schemas.py         # Pydantic schemas
-├── app/                   # Frontend
-│   └── streamlit_app.py   # Streamlit UI
-├── model/                 # Saved models
-├── data/                  # Data files
-├── requirements.txt       # Python dependencies
-└── README.md             # This file
+E-commerce-product-delivery-prediction/
+│
+├── api/
+│   ├── main.py
+│   ├── schemas.py
+│   └── model.py
+│
+├── app/
+│   └── streamlit_app.py
+│
+├── model/
+│   └── delivery_delay_model.pkl
+│
+├── requirements.txt
+└── Dockerfile
 ```
 
 ## 🎯 Business Problem
