@@ -10,6 +10,9 @@ This project combines <b>Machine Learning, MLOps, APIs, dashboards, and deployab
 to help e-commerce businesses reduce SLA breaches, refunds, and customer dissatisfaction.
 </p>
 
+<p>
+  “Built an end-to-end ML system to predict e-commerce delivery delays. It includes data processing, feature engineering, model training, real-time API via FastAPI, interactive Streamlit UI, Docker-based deployment, and comprehensive documentation, demonstrating full lifecycle ML proficiency.”
+</p>
 <hr>
 
 <h2>📌 Problem Statement</h2>
