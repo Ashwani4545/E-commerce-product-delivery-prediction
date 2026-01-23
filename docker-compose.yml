@@ -1,0 +1,53 @@
+services:
+  # FastAPI Backend Service
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ecommerce-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MODEL_PATH=/app/delivery_delay_model.pkl
+    volumes:
+      - ./delivery_delay_model.pkl:/app/delivery_delay_model.pkl
+      - ./api:/app/api
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+    networks:
+      - ecommerce-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Streamlit Frontend Service
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: ecommerce-streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - API_URL=http://api:8000
+    volumes:
+      - ./app:/app/app
+    command: streamlit run app/streamlit_app.py --server.port 8501 --server.address 0.0.0.0
+    restart: unless-stopped
+    networks:
+      - ecommerce-network
+    depends_on:
+      api:
+        condition: service_healthy
+
+networks:
+  ecommerce-network:
+    driver: bridge
+
+volumes:
+  model:

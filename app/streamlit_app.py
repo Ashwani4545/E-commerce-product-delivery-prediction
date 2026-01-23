@@ -2,10 +2,12 @@
 # Step 2.1: Streamlit App (app/streamlit_app.py)
 import streamlit as st
 import requests
+import os
 
 st.title("📦 E-Commerce Delivery Delay Predictor")
 
-api_url = "http://127.0.0.1:8000/predict"
+# Get API URL from environment variable, with fallback for local development
+api_url = os.getenv("API_URL", "http://127.0.0.1:8000") + "/predict"
 
 price = st.number_input("Product Price", min_value=0.0)
 quantity = st.number_input("Quantity", min_value=1)
@@ -45,8 +47,8 @@ if st.button("Predict Delivery"):
                 st.success(f"✅ Delivery likely on time (Risk: {result['delay_probability']*100:.1f}%)")
                 
     except requests.exceptions.ConnectionError:
-        st.error("❌ Cannot connect to API. Make sure FastAPI server is running at http://localhost:8000")
-        st.info("Start the API with: uvicorn api.main:app --reload")
+        st.error(f"❌ Cannot connect to API at {api_url.replace('/predict', '')}. Make sure FastAPI server is running.")
+        st.info("For Docker: Services should auto-connect. Check 'docker-compose logs api'")
     except requests.exceptions.Timeout:
         st.error("❌ Request timeout. The API is taking too long to respond.")
     except requests.exceptions.JSONDecodeError:
