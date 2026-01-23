@@ -1,211 +1,168 @@
-# 🚚 E-Commerce Delivery Delay Prediction System
+<h1>🚚 E-Commerce Delivery Delay Prediction System</h1>
 
-An end-to-end, production-ready Machine Learning system that predicts whether an e-commerce order will be delivered on time or delayed — enabling proactive logistics decisions and reducing operational losses.
+<p>
+An end-to-end, production-ready Machine Learning system that predicts whether an e-commerce order will be 
+<b>delivered on time or delayed</b> before shipping happens.
+</p>
 
-## 📂 Project Structure
-```
+<p>
+This project combines <b>Machine Learning, MLOps, APIs, dashboards, and deployable architecture</b> 
+to help e-commerce businesses reduce SLA breaches, refunds, and customer dissatisfaction.
+</p>
+
+<hr>
+
+<h2>📌 Problem Statement</h2>
+<ul>
+  <li>SLA penalties and refunds</li>
+  <li>Loss of customer trust</li>
+  <li>Inefficient logistics planning</li>
+  <li>Increased operational costs</li>
+  <li>No early warning mechanism for risky orders</li>
+</ul>
+
+<p><b>This system enables proactive decision-making by predicting delays in advance.</b></p>
+
+<hr>
+
+<h2>🎯 Objectives</h2>
+<ul>
+  <li>Predict delivery delay at the order level</li>
+  <li>Identify key drivers of delay</li>
+  <li>Provide real-time predictions via API</li>
+  <li>Provide a business-friendly UI</li>
+  <li>Implement a complete MLOps lifecycle</li>
+  <li>Make the system cloud-deployable</li>
+</ul>
+
+<hr>
+
+<h2>🧠 ML Problem Formulation</h2>
+
+<h3>Target Variable</h3>
+<table border="1" cellpadding="8">
+<tr><th>Variable</th><th>Description</th></tr>
+<tr><td>delivery_delayed</td><td>0 → On-time, 1 → Delayed (&gt; 5 days SLA)</td></tr>
+</table>
+
+<h3>Feature Engineering</h3>
+<ul>
+  <li>Order value (price × quantity)</li>
+  <li>Day of week & month (seasonality)</li>
+  <li>Customer risk score (historical behavior)</li>
+  <li>Product category</li>
+  <li>Customer segment</li>
+  <li>Order channel</li>
+  <li>Device type</li>
+</ul>
+
+<hr>
+
+<h2>🗃️ Dataset</h2>
+<p><b>File used:</b> ecommerce_orders_clean.csv</p>
+<ul>
+  <li>Order & shipping dates</li>
+  <li>Customer, product, device, and channel information</li>
+  <li>Suitable for ML and BI dashboards</li>
+</ul>
+
+<hr>
+
+<h2>🧪 Models Trained</h2>
+<table border="1" cellpadding="8">
+<tr><th>Model</th><th>Purpose</th></tr>
+<tr><td>Logistic Regression</td><td>Baseline</td></tr>
+<tr><td>Decision Tree</td><td>Interpretability</td></tr>
+<tr><td><b>Random Forest</b></td><td>Final selected model</td></tr>
+<tr><td>XGBoost</td><td>Performance comparison</td></tr>
+</table>
+
+<p><b>Evaluation Metric:</b> F1-Score</p>
+
+<hr>
+
+<h2>🏗️ System Architecture</h2>
+
+<pre>
+Raw Data
+   ↓
+Feature Engineering
+   ↓
+Model Training & Evaluation
+   ↓
+MLflow Tracking
+   ↓
+FastAPI Deployment
+   ↓
+Streamlit UI
+   ↓
+Monitoring (Evidently)
+   ↓
+Retraining (Airflow/Prefect)
+</pre>
+
+<hr>
+
+<h2>📂 Project Structure</h2>
+
+<pre>
 E-commerce-product-delivery-prediction/
 │
 ├── api/
-│   ├── main.py
-│   ├── schemas.py
-│   └── model.py
-│
 ├── app/
-│   └── streamlit_app.py
-│
 ├── model/
-│   └── delivery_delay_model.pkl
-│
 ├── requirements.txt
 └── Dockerfile
-```
+</pre>
 
-## 🎯 Business Problem
+<hr>
 
-E-commerce companies face:
-- Unpredictable delivery delays
-- No early warning system for risky orders
-- Poor visibility into delay drivers (category, customer, channel)
-- Reactive logistics planning
-- Increased operational costs and customer dissatisfaction
+<h2>⚙️ Tech Stack</h2>
 
-## ✅ Solution
+<h3>Data & ML</h3>
+<p>Python, Pandas, NumPy, Scikit-learn, XGBoost</p>
 
-This project provides:
-- Early prediction of delivery delays
-- Business insights into why delays occur
-- Automated ML pipelines (MLOps)
-- Real-time predictions via API & UI
-- Interactive dashboards for stakeholders
+<h3>MLOps</h3>
+<p>MLflow, Airflow/Prefect, Evidently AI, GitHub Actions</p>
 
-## 📂 Dataset
-#### Final Dataset Used: ``` ecommerce_orders_clean.csv ```
+<h3>API & UI</h3>
+<p>FastAPI, Pydantic, Streamlit</p>
 
-### Key Characteristics
+<h3>Visualization</h3>
+<p>Power BI / Tableau</p>
 
-- Order-level e-commerce data
-- Order & shipping dates
-- Product, customer, channel, and device information
-- Suitable for ML, visualization, and MLOps
+<h3>Deployment</h3>
+<p>Docker, Streamlit Cloud, AWS</p>
 
-### Engineered Targets
+<hr>
 
-- delivery_days = shipping_date − order_date
-delivery_delayed (target):
-  - 0 → Delivered on time
-  - 1 → Delivery delayed (SLA > 5 days)
+<h2>🚀 Installation</h2>
 
-## 🧠 Features Engineered
-
-- Order value (price × quantity)
-- Day of week
-- Month / seasonality
-- Customer risk score (historical delay behavior)
-- Product category
-- Customer segment
-- Order channel
-- Device type
-
-## 🧪 Machine Learning
-### Models Trained
-
-- Logistic Regression (baseline)
-- Decision Tree
-- Random Forest (tuned & selected)
-- XGBoost (optional comparison)
-
-### Evaluation Metric
-
-- F1-Score (handles class imbalance)
-
-### Final Model
-
-- Tuned Random Forest
-- Saved as a single deployable pipeline (.pkl) including preprocessing
-
-## 🔁 MLOps Architecture
-
-The project follows a full ML lifecycle:
-```
-Data → Feature Engineering → Training → Evaluation
-     → Model Registry → Deployment → Monitoring → Retraining
-```
-### MLOps Tools
-
-- MLflow – experiment tracking & model registry
-- Apache Airflow / Prefect – automated training pipelines
-- Evidently AI – data & concept drift detection
-- GitHub Actions – CI/CD (optional)
-
-## 🌐 API & Application
-### Backend
-
-- FastAPI
-- Input validation using Pydantic
-- Real-time predictions
-
-### Frontend
-
-- Streamlit
-- Business-friendly UI for non-technical users
-
-### Output
-
-- Delivery prediction (On-time / Delayed)
-- Delay probability score
-
-## 📊 Visualization & Dashboards
-
-Interactive dashboards were built using Power BI / Tableau.
-
-### Dashboards Included
-#### 1️⃣ Delivery Performance
-
-- On-time vs delayed orders
-- Average delivery days
-- SLA breach rate
-
-#### 2️⃣ Delay Trends
-
-- Monthly & seasonal delay patterns
-- Weekday vs weekend analysis
-
-#### 3️⃣ Customer Behavior
-
-- Delay rate by customer segment
-- Channel & device impact
-- Customer risk score analysis
-- Screenshots are embedded below 👇
-
-## 📸 Dashboard Snapshots
-### Delivery Performance
-### Delay Trends
-### Customer Behavior
-
-## 🧱 Tech Stack (Final)
-### Data & ML
-
-- Python, Pandas, NumPy
-- Scikit-learn
-- XGBoost
-
-### MLOps
-
-- MLflow
-- Airflow / Prefect
-- Evidently AI
-
-### API & UI
-
-- FastAPI
-- Streamlit
-
-### Visualization
-
-- Power BI / Tableau
-
-### Deployment
-- Docker
-- Streamlit Cloud / Hugging Face Spaces
-- AWS (S3, EC2, ECS – optional)
-
-## Installation
-
-1. Create a virtual environment:
-```bash
+<pre>
 python -m venv venv
-venv\Scripts\activate  # Windows
-# or
-source venv/bin/activate  # Linux/Mac
-```
-
-2. Install dependencies:
-```bash
+venv\Scripts\activate
 pip install -r requirements.txt
-```
+</pre>
 
-## Usage
-### 1. Start FastAPI Server
-```bash
-cd C:\Users\DELL\Desktop\E-commerce-preoduct-delivery-prediction
-uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
-```
+<hr>
 
-API will be available at:
-- API: http://localhost:8000
-- Swagger Docs: http://localhost:8000/docs
+<h2>▶️ Running the Application</h2>
 
-### 2. Start Streamlit App (in a new terminal)
-```bash
+<h3>Start FastAPI</h3>
+<pre>
+uvicorn api.main:app --reload --port 8000
+</pre>
+
+<h3>Start Streamlit</h3>
+<pre>
 streamlit run app/streamlit_app.py
-```
+</pre>
 
-App will open at: http://localhost:8501
+<hr>
 
-## API Usage Example
+<h2>🔌 API Example</h2>
 
-```python
+<pre>
 import requests
 
 payload = {
@@ -220,62 +177,62 @@ payload = {
     "customer_risk_score": 0.3
 }
 
-response = requests.post("http://localhost:8000/predict", json=payload)
-print(response.json())
-```
+print(requests.post("http://localhost:8000/predict", json=payload).json())
+</pre>
 
-## 🚀 How to Run Locally
-1️⃣ Clone Repository
-```
-git clone https://github.com/your-username/ecommerce-delivery-prediction.git
-cd ecommerce-delivery-prediction
-```
+<hr>
 
-2️⃣ Install Dependencies
-```
-pip install -r requirements.txt
-```
+<h2>📊 Business Dashboards</h2>
+<ul>
+  <li>On-time vs delayed trends</li>
+  <li>Seasonal delay patterns</li>
+  <li>Customer segment risk</li>
+  <li>Channel & device impact</li>
+</ul>
 
-3️⃣ Run API
-```
-uvicorn api.main:app --reload
-```
+<p><i>Add dashboard screenshots here</i></p>
 
-4️⃣ Run Streamlit App
-```
-streamlit run app/streamlit_app.py
-```
+<hr>
 
-## 📈 Business Impact
+<h2>💼 Business Impact</h2>
+<ul>
+  <li>Early detection of risky orders</li>
+  <li>Better logistics planning</li>
+  <li>Reduced refunds and penalties</li>
+  <li>Improved customer satisfaction</li>
+</ul>
 
-- Early identification of high-risk deliveries
-- Improved logistics planning
-- Reduced refunds & penalties
-- Better customer satisfaction
-- Data-driven operational decisions
+<hr>
 
-## 🌟 What Makes This Project Unique
+<h2>✨ What Makes This Project Unique</h2>
+<ul>
+  <li>Business-focused ML system</li>
+  <li>Customer behavior integrated into prediction</li>
+  <li>Complete MLOps lifecycle</li>
+  <li>API + UI + Dashboards</li>
+  <li>Cloud-ready architecture</li>
+</ul>
 
-- Business-driven ML (not accuracy-only)
-- Customer behavior integrated into prediction
-- Full MLOps lifecycle implementation
-- Real-time API + UI
-- Strong visualization & storytelling
-- Live-deployable architecture
+<hr>
 
-## 🧠 How to Explain This Project (Interview Ready)
+<h2>🧠 Interview One-Liner</h2>
+<p>
+“I built a production-grade ML system that predicts e-commerce delivery delays using behavioral, seasonal,
+and operational signals, deployed via FastAPI with monitoring and business dashboards.”
+</p>
 
-“I built an end-to-end e-commerce delivery delay prediction system using machine learning, MLOps pipelines, APIs, and business dashboards to proactively reduce logistics delays and improve customer experience.”
+<hr>
 
-## 📌 Future Enhancements
+<h2>🔮 Future Enhancements</h2>
+<ul>
+  <li>ETA prediction (regression)</li>
+  <li>Warehouse and route optimization</li>
+  <li>Kafka streaming pipeline</li>
+  <li>Explainable AI (SHAP)</li>
+</ul>
 
-- ETA prediction (regression)
-- Route & warehouse optimization
-- Real-time streaming data (Kafka)
-- Explainable AI (SHAP)
-- Auto-scaling cloud deployment
+<hr>
 
-## 👤 Author
-
-Ashwani Pandey
-Data Science & ML Enthusiast
+<h2>👤 Author</h2>
+<p><b>Ashwani Pandey</b><br>
+Data Science & Machine Learning Enthusiast</p>
