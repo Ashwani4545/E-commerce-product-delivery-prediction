@@ -30,6 +30,10 @@ def predict_delay(data: PredictionInput):
         "delivery_delayed": int(prediction),
         "delay_probability": round(float(probability), 3)
     }
+    
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 @app.get("/")
 def read_root():
