@@ -3,6 +3,10 @@ from api.schemas import PredictionInput
 from api.model import load_model
 import pandas as pd
 
+
+import logging
+logging.basicConfig(level=logging.INFO)
+
 app = FastAPI(title="E-Commerce Delivery Delay Prediction API")
 
 model = None  # placeholder
