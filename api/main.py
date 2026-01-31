@@ -15,6 +15,16 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="E-Commerce Delivery Delay Prediction API")
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # change later for production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 model = None  # placeholder
 
 @app.on_event("startup")
