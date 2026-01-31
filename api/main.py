@@ -32,7 +32,7 @@ model = None  # placeholder
 def startup_event():
     global model
     model = load_model()
-    print("✅ Model loaded successfully")
+    logger.info("✅ Model loaded successfully")
 
 
 @app.post("/predict")
