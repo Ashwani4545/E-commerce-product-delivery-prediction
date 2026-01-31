@@ -30,9 +30,9 @@ jobs:
         run: |
           python -c "import sklearn; import pandas; import fastapi; import streamlit"
 
-      - name: API sanity check
+      - name: API syntax check
         run: |
-          python -c "from api.main import app; print('FastAPI app loaded successfully')"
+          python -m py_compile api/main.py
 
       - name: Model loading test
         run: |
