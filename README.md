@@ -115,8 +115,17 @@ E-commerce-product-delivery-prediction/
 ├── api/
 ├── app/
 ├── model/
+│   └── delivery_delay_model.pkl
+├── notebooks/
+├── reports/
+│
+├── Dockerfile
+├── Dockerfile.streamlit
+├── docker-compose.yml
 ├── requirements.txt
-└── Dockerfile
+├── README.md
+├── .env.example
+├── .gitignore
 </pre>
 
 <hr>
