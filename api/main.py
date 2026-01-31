@@ -27,11 +27,13 @@ app.add_middleware(
 
 model = None  # placeholder
 
+
 @app.on_event("startup")
 def startup_event():
     global model
     model = load_model()
     print("✅ Model loaded successfully")
+
 
 @app.post("/predict")
 def predict_delay(data: PredictionInput):
@@ -50,10 +52,13 @@ def predict_delay(data: PredictionInput):
         "delivery_delayed": int(prediction),
         "delay_probability": round(float(probability), 3)
     }
-    
+logger.info(f"Prediction requested with data: {input_data}")
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
 
 @app.get("/")
 def read_root():
