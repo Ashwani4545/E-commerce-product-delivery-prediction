@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from api.schemas import PredictionInput
 from api.model import load_model
+
 import pandas as pd
 import logging
 
