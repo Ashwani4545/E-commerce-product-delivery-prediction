@@ -1,10 +1,13 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from api.schemas import PredictionInput
 from api.model import load_model
 import pandas as pd
-
 import logging
 
+# ---------------------------------------------------
+# Logging Configuration
+# ---------------------------------------------------
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
@@ -12,36 +15,50 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+# ---------------------------------------------------
+# FastAPI App
+# ---------------------------------------------------
+app = FastAPI(
+    title="E-Commerce Delivery Delay Prediction API",
+    description="Predicts whether an e-commerce order will be delayed",
+    version="1.0.0"
+)
 
-app = FastAPI(title="E-Commerce Delivery Delay Prediction API")
-
-from fastapi.middleware.cors import CORSMiddleware
-
+# ---------------------------------------------------
+# CORS Middleware
+# ---------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # change later for production
+    allow_origins=["*"],  # Restrict in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-model = None  # placeholder
+# ---------------------------------------------------
+# Load ML Model on Startup
+# ---------------------------------------------------
+model = None  # sklearn pipeline
 
 
 @app.on_event("startup")
 def startup_event():
     global model
     model = load_model()
-    logger.info("✅ Model loaded successfully")
+    logger.info("✅ ML model loaded successfully")
 
-
+# ---------------------------------------------------
+# Prediction Endpoint
+# ---------------------------------------------------
 @app.post("/predict")
 def predict_delay(data: PredictionInput):
     data_dict = data.dict()
 
-    # Calculate order_value if missing
+    # Calculate order_value if not provided
     if data_dict.get("order_value") is None:
         data_dict["order_value"] = data_dict["price"] * data_dict["quantity"]
+
+    logger.info(f"Prediction request received: {data_dict}")
 
     input_df = pd.DataFrame([data_dict])
 
@@ -52,16 +69,19 @@ def predict_delay(data: PredictionInput):
         "delivery_delayed": int(prediction),
         "delay_probability": round(float(probability), 3)
     }
-logger.info(f"Prediction requested with data: {input_data}")
 
-
+# ---------------------------------------------------
+# Health Check Endpoint
+# ---------------------------------------------------
 @app.get("/health")
-def health():
-    return {"status": "ok"}
+def health_check():
+    return {"status": "healthy"}
 
-
+# ---------------------------------------------------
+# Root Endpoint
+# ---------------------------------------------------
 @app.get("/")
-def read_root():
+def root():
     return {
         "message": "E-Commerce Delivery Delay Prediction API",
         "docs": "/docs"
