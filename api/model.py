@@ -1,26 +1,28 @@
-# Step 1.2: Load Model (api/model.py)
-import joblib
 import os
+import joblib
+from dotenv import load_dotenv
 
-# Trying the multiple possible paths with environment variable support
-MODEL_PATH_ENV = os.getenv("MODEL_PATH", None)
+# Load environment variables from .env
+load_dotenv()
 
-POSSIBLE_PATHS = []
-if MODEL_PATH_ENV:
-    POSSIBLE_PATHS.append(MODEL_PATH_ENV)
+# Read model path from environment
+MODEL_PATH = os.getenv("MODEL_PATH")
 
-# default fallback paths
-POSSIBLE_PATHS.extend([
-    "model/delivery_deay_model.pkl",
-    "delivery_delay_model.pkl",
-    "model/delivery_delay_model.pkl",
-    "../model/delivery_deay_model.pkl",
-    "../delivery_delay_model.pkl",
-])
+if not MODEL_PATH:
+    raise ValueError(
+        "MODEL_PATH not found in environment variables. "
+        "Please set MODEL_PATH in .env file."
+    )
 
 def load_model():
-    for path in POSSIBLE_PATHS:
-        if os.path.exists(path):
-            print(f" Loading model from: {path}")
-            return joblib.load(path)
-    raise FileNotFoundError(f"Model file not found. Checked paths: {POSSIBLE_PATHS}")
+    if not os.path.exists(MODEL_PATH):
+        raise FileNotFoundError(
+            f"Model file not found at path: {MODEL_PATH}"
+        )
+
+    print(f"✅ Loading model from: {MODEL_PATH}")
+    return joblib.load(MODEL_PATH)
+
+
+# Load model once at startup
+model = load_model()
