@@ -179,6 +179,18 @@ streamlit run app/streamlit_app.py
 
 <hr>
 
+## 🧪 Automated Testing
+
+The project includes automated tests to validate:
+
+- Model loading and prediction consistency
+- Core feature transformations
+- API health and prediction endpoints
+
+Tests are implemented using `pytest` and can be executed locally:
+```bash
+pytest
+
 <h2>🔌 API Example</h2>
 
 <pre>
