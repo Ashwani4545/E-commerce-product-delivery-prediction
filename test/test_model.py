@@ -1,8 +1,15 @@
 import joblib
 import os
+from dotenv import load_dotenv
 
 MODEL_PATH = "model/delivery_delay_model.pkl"
+load_dotenv()
 
+MODEL_PATH = os.getenv("MODEL_PATH")
+
+if not MODEL_PATH:
+    raise ValueError("MODEL_PATH is not set")
+    
 def test_model_loads():
     assert os.path.exists(MODEL_PATH)
     model = joblib.load(MODEL_PATH)
