@@ -148,6 +148,8 @@ E-commerce-product-delivery-prediction/
 <p>Docker, Streamlit Cloud, AWS</p>
 
 <hr>
+![CI-CD](https://github.com/Ashwani4545/E-commerce-product-delivery-prediction/actions/workflows/ci-cd.yml/badge.svg)
+<hr>
 
 <h2>🚀 Installation</h2>
 
