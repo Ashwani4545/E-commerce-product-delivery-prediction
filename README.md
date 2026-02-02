@@ -148,7 +148,7 @@ E-commerce-product-delivery-prediction/
 <p>Docker, Streamlit Cloud, AWS</p>
 
 <hr>
-![CI-CD](https://github.com/Ashwani4545/E-commerce-product-delivery-prediction/actions/workflows/ci-cd.yml/badge.svg)
+(https://github.com/Ashwani4545/E-commerce-product-delivery-prediction/actions/workflows/ci-cd.yml/badge.svg)
 <hr>
 
 <h2>🚀 Installation</h2>
@@ -172,6 +172,10 @@ uvicorn api.main:app --reload --port 8000
 <pre>
 streamlit run app/streamlit_app.py
 </pre>
+
+<hr>
+
+<h2>pip install pytest httpx</h2>
 
 <hr>
 
