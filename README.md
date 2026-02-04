@@ -95,8 +95,6 @@ Monitoring (Evidently AI)
 Retraining (Airflow / Prefect)
 ```
 
-<hr>
-
 <h2>📂 Project Structure</h2>
 
 <pre>
@@ -137,10 +135,6 @@ E-commerce-product-delivery-prediction/
 <h3>Deployment</h3>
 <p>Docker, Streamlit Cloud, AWS</p>
 
-<hr>
-(https://github.com/Ashwani4545/E-commerce-product-delivery-prediction/actions/workflows/ci-cd.yml/badge.svg)
-<hr>
-
 <h2>🚀 Installation</h2>
 
 <pre>
@@ -163,11 +157,7 @@ uvicorn api.main:app --reload --port 8000
 streamlit run app/streamlit_app.py
 </pre>
 
-<hr>
-
 <h2>pip install pytest httpx</h2>
-
-<hr>
 
 ## 🧪 Automated Testing
 
@@ -178,7 +168,7 @@ The project includes automated tests to validate:
 - API health and prediction endpoints
 
 Tests are implemented using `pytest` and can be executed locally:
-```bash
+
 pytest
 
 <h2>🔌 API Example</h2>
