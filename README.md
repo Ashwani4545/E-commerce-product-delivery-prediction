@@ -1,109 +1,99 @@
-<h1>🚚 E-Commerce Delivery Delay Prediction System</h1>
+# 🚚 E-Commerce Delivery Delay Prediction System
 
-<p>
-An end-to-end, production-ready Machine Learning system that predicts whether an e-commerce order will be 
-<b>delivered on time or delayed</b> before shipping happens.
-</p>
+An **end-to-end, production-ready Machine Learning system** that predicts whether an e-commerce order will be **delivered on time or delayed** *before dispatch*.
 
-<p>
-This project combines <b>Machine Learning, MLOps, APIs, dashboards, and deployable architecture</b> 
-to help e-commerce businesses reduce SLA breaches, refunds, and customer dissatisfaction.
-</p>
+This project integrates **Machine Learning, MLOps, APIs, dashboards, and deployable architecture** to help e-commerce businesses reduce SLA breaches, refunds, and customer dissatisfaction.
 
-```
-“Built an end-to-end ML system to predict e-commerce delivery delays. It includes data processing, feature engineering, model training, real-time API via FastAPI, interactive Streamlit UI, Docker-based deployment, and comprehensive documentation, demonstrating full lifecycle ML proficiency.”
-```
+---
 
-<hr>
+## 📌 Problem Statement
 
-<h2>📌 Problem Statement</h2>
-<ul>
-  <li>SLA penalties and refunds</li>
-  <li>Loss of customer trust</li>
-  <li>Inefficient logistics planning</li>
-  <li>Increased operational costs</li>
-  <li>No early warning mechanism for risky orders</li>
-</ul>
+E-commerce platforms commonly face:
 
-<p><b>This system enables proactive decision-making by predicting delays in advance.</b></p>
+- SLA penalties and refunds  
+- Loss of customer trust  
+- Inefficient logistics planning  
+- Increased operational costs  
+- No early-warning mechanism for risky orders  
 
-<hr>
+**This system enables proactive decision-making by predicting delivery delays in advance.**
 
-<h2>🎯 Objectives</h2>
-<ul>
-  <li>Predict delivery delay at the order level</li>
-  <li>Identify key drivers of delay</li>
-  <li>Provide real-time predictions via API</li>
-  <li>Provide a business-friendly UI</li>
-  <li>Implement a complete MLOps lifecycle</li>
-  <li>Make the system cloud-deployable</li>
-</ul>
+---
 
-<hr>
+## 🎯 Objectives
 
-<h2>🧠 ML Problem Formulation</h2>
+- Predict delivery delays at the order level  
+- Identify key drivers of delivery delays  
+- Provide real-time predictions via REST API  
+- Offer a business-friendly UI  
+- Implement a complete MLOps lifecycle  
+- Enable cloud-ready deployment  
 
-<h3>Target Variable</h3>
-<table border="1" cellpadding="8">
-<tr><th>Variable</th><th>Description</th></tr>
-<tr><td>delivery_delayed</td><td>0 → On-time, 1 → Delayed (&gt; 5 days SLA)</td></tr>
-</table>
+---
 
-<h3>Feature Engineering</h3>
-<ul>
-  <li>Order value (price × quantity)</li>
-  <li>Day of week & month (seasonality)</li>
-  <li>Customer risk score (historical behavior)</li>
-  <li>Product category</li>
-  <li>Customer segment</li>
-  <li>Order channel</li>
-  <li>Device type</li>
-</ul>
+## 🧠 ML Problem Formulation
 
-<hr>
+### Target Variable
 
-<h2>🗃️ Dataset</h2>
-<p><b>File used:</b> ecommerce_orders_clean.csv</p>
-<ul>
-  <li>Order & shipping dates</li>
-  <li>Customer, product, device, and channel information</li>
-  <li>Suitable for ML and BI dashboards</li>
-</ul>
+| Variable | Description |
+|--------|-------------|
+| `delivery_delayed` | 0 → On-time, 1 → Delayed (SLA > 5 days) |
 
-<hr>
+### Feature Engineering
 
-<h2>🧪 Models Trained</h2>
-<table border="1" cellpadding="8">
-<tr><th>Model</th><th>Purpose</th></tr>
-<tr><td>Logistic Regression</td><td>Baseline</td></tr>
-<tr><td>Decision Tree</td><td>Interpretability</td></tr>
-<tr><td><b>Random Forest</b></td><td>Final selected model</td></tr>
-<tr><td>XGBoost</td><td>Performance comparison</td></tr>
-</table>
+- Order value (`price × quantity`)
+- Order day of week and month (seasonality)
+- Customer risk score (historical behavior)
+- Product category
+- Customer segment
+- Order channel
+- Device type
 
-<p><b>Evaluation Metric:</b> F1-Score</p>
+---
 
-<hr>
+## 🗃️ Dataset
 
-<h2>🏗️ System Architecture</h2>
+**File:** `ecommerce_orders_clean.csv`
 
-<pre>
+Includes:
+- Order and shipping dates  
+- Customer, product, device, and channel attributes  
+- Cleaned and structured for ML and BI dashboards  
+
+---
+
+## 🧪 Models Trained
+
+| Model | Purpose |
+|------|--------|
+| Logistic Regression | Baseline |
+| Decision Tree | Interpretability |
+| **Random Forest** | Final selected model |
+| XGBoost | Performance comparison |
+
+**Evaluation Metric:** F1-Score
+
+---
+
+## 🏗️ System Architecture
+
+```text
 Raw Data
    ↓
 Feature Engineering
    ↓
 Model Training & Evaluation
    ↓
-MLflow Tracking
+MLflow Experiment Tracking
    ↓
-FastAPI Deployment
+FastAPI Model Serving
    ↓
 Streamlit UI
    ↓
-Monitoring (Evidently)
+Monitoring (Evidently AI)
    ↓
-Retraining (Airflow/Prefect)
-</pre>
+Retraining (Airflow / Prefect)
+```
 
 <hr>
 
