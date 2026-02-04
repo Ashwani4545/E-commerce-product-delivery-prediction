@@ -191,8 +191,6 @@ payload = {
 print(requests.post("http://localhost:8000/predict", json=payload).json())
 </pre>
 
-<hr>
-
 <h2>📊 Business Dashboards</h2>
 <ul>
   <li>On-time vs delayed trends</li>
@@ -203,8 +201,6 @@ print(requests.post("http://localhost:8000/predict", json=payload).json())
 
 <p><i>Add dashboard screenshots here</i></p>
 
-<hr>
-
 <h2>💼 Business Impact</h2>
 <ul>
   <li>Early detection of risky orders</li>
@@ -212,8 +208,6 @@ print(requests.post("http://localhost:8000/predict", json=payload).json())
   <li>Reduced refunds and penalties</li>
   <li>Improved customer satisfaction</li>
 </ul>
-
-<hr>
 
 <h2>✨ What Makes This Project Unique</h2>
 <ul>
@@ -224,15 +218,11 @@ print(requests.post("http://localhost:8000/predict", json=payload).json())
   <li>Cloud-ready architecture</li>
 </ul>
 
-<hr>
-
 <h2>🧠 Interview One-Liner</h2>
 <p>
 “I built a production-grade ML system that predicts e-commerce delivery delays using behavioral, seasonal,
 and operational signals, deployed via FastAPI with monitoring and business dashboards.”
 </p>
-
-<hr>
 
 <h2>🔮 Future Enhancements</h2>
 <ul>
@@ -241,8 +231,6 @@ and operational signals, deployed via FastAPI with monitoring and business dashb
   <li>Kafka streaming pipeline</li>
   <li>Explainable AI (SHAP)</li>
 </ul>
-
-<hr>
 
 <h2>👤 Author</h2>
 <p><b>Ashwani Pandey</b><br>
